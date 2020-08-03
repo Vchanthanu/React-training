@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Farmingproduct.css">
+    <title>loginPage</title>
+</head>
+
+<body>
+    <div class='header'>
+        <a class="logotitle" href="login.html">
+            <img class="logo" src="./AppLogo.png" alt="Logo of Farming Product App">
+            <h2 class="appname">Farming Products</h2>
+        </a>
+        <h4 class="menu">
+            <a class=menulist href="product.html">Product</a>
+            <a class=menulist href="dashboard.html">Dashboard</a>
+            <!-- <a class=menulist href="login.html">Login</a> -->
+            <a class=menulist href="signup.html">SignUp</a>
+            <span class=menulist>Jhon</span>
+        </h4>
+    </div>
+    <div class="section">
+        <div class="container">
+            <span class="image">
+                <h1 class="quote">Farming protects Future</h1>
+                <h4 class="option"><button class="login button"onclick="window.location.href='./login.html'">
+                        <h3>LOGIN</h3>
+                    </button>
+                </h4>
+                <h4 class="option"><button class="signup button"onclick="window.location.href='./signup.html'">
+                        <h3>SIGNUP</h3>
+                    </button>
+                </h4>
+            </span>
+            <span class="loginarea">
+                <h1>Login Here</h1>
+                <form class="form" onsubmit="login()">
+                    <label >E-mail:</label>
+                    <input type="email"><br>
+                    <br>
+                    <label >Password:</label>
+                    <input type="password"><br><br>
+                    <a href="Forgot password">Forgot Password.?</a>&nbsp;
+                    <input type="submit" value="Login">
+                </form>
+            </span>
+        </div>
+    </div>
+    <!-- <footer>
+        <h3>Copyright 2020</h3>
+    </footer> -->
+</body>
+<script src="./Farmingproduct.js"></script>
+</html>

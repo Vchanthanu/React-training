@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Farmingproduct.css">
+    <title>SignPage</title>
+</head>
+
+<body>
+    <div class='header'>
+        <a class="logotitle" href="login.html">
+            <img class="logo" src="./AppLogo.png" alt="Logo of Farming Product App">
+            <h2 class="appname">Farming Products</h2>
+        </a>
+        <h4 class="menu">
+            <a class=menulist href="product.html">Product</a>
+            <a class=menulist href="dashboard.html">Dashboard</a>
+            <a class=menulist href="login.html">Login</a>
+            <!-- <a class=menulist href="signup">SignUp</a> -->
+            <span class=menulist>Jhon</span>
+        </h4>
+    </div>
+    <div class="section">
+        <div class="container">
+            <span class="image">
+                <h1 class="quote">Farming protects Future</h1>
+                <h4 class="option"><button class="login button" onclick="window.location.href='./login.html'">
+                        <h3>LOGIN</h3>
+                    </button>
+                </h4>
+                <h4 class="option"><button class="signup button" onclick="window.location.href='./signup.html'">
+                        <h3>SIGNUP</h3>
+                    </button>
+                </h4>
+            </span>
+            <span class="loginarea">
+                <h1>SignUp Here</h1>
+                <form class="form"  onsubmit="signup()">
+                    <label for='firstname'>First Name</label>
+                    <input type="text" id='firstname' name="firstname"><br><br>
+                    <label for='lastname'>Last Name</label>
+                    <input type="text" id='lastname' name="lastname"><br><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id='email'><br><br>
+                    <label for='password'>Password:</label>
+                    <input type="password" id="password"><br><br>
+                    <label for="confirmpassword">Confirmpassword</label>
+                    <input type="password" id='confirmpassword'><br><br>
+                    <label for="sequrityquestion">Sequrity Question</label>
+                    <select id="sequrityquestion" name="sequrityquestion">
+                        <option value="what is your first school?">what is your first school?</option>
+                        <option value="who is your best friend?">who is your best friend?</option>
+                        <option value="what is tour favourite color?">what is tour favourite color?</option>
+                    </select><br><br>
+                    <label for="answer">Sequrity Answer?</label>
+                    <input type="text" id="answer"><br><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>&nbsp;&nbsp;
+                    <input type="submit" value="SignUp">
+                </form>
+            </span>
+        </div>
+    </div>
+    <!-- <footer>
+        <h3>Copyright 2020</h3>
+    </footer> -->
+</body>
+<script src="./Farmingproduct.js"></script>
+</html>

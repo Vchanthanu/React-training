@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Farmingproduct.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class='header'>
+        <a class="logotitle" href="product.html">
+            <img class="logo" src="./AppLogo.png" alt="Logo of Farming Product App">
+            <h2 class="appname">Farming Products</h2>
+        </a>
+        <h4 class="menu">
+            <a class=menulist href="product.html">Product</a>
+            <!-- <a class=menulist href="dashboard.html">Dashboard</a> -->
+            <!-- <a class=menulist href="login.html">Login</a> -->
+            <!-- <a class=menulist href="signup.html">SignUp</a> -->
+            <a class=menulist href="login.html">Logout</a>
+            <span class=menulist>Jhon</span>
+        </h4>
+
+    </div>
+    <!-- <div> -->
+    <div class="dashboard">
+        <table class="stocktable">
+            <caption><b>List of Product</b></caption>
+            <tr>
+                <th>Product Name</th>
+                <th>Stock</th>
+                <th>Update</th>
+                <th>Required</th>
+            </tr>
+            <tr>
+                <td>Tractor</td>
+                <td>10 Nos</td>
+                <td><button onclick="updatepdt()" >Update</button></td>
+                <td><button onclick='deletepdt()'>NotRequired</button></td>
+            </tr>
+            <tr>
+                <td>Apple Sapling</td>
+                <td>100 Nos</td>
+                <td><button onclick="updatepdt()" >Update</button></td>
+                <td><button onclick='deletepdt()' >NotRequired</button></td>
+            </tr>
+            <tr>
+                <td>Mango Sapling</td>
+                <td>100 Nos</td>
+                <td><button onclick="updatepdt()">Update</button></td>
+                <td><button onclick='deletepdt()' >NotRequired</button></td>
+            </tr>
+        </table>
+        <span class="chart" id="chartContainer"></span>
+    </div><br>
+    <div class="searcharea">
+        <span>
+            <input class='searchbar' type="text" name='productname' placeholder="Product Name...">
+            <button onclick="search()" class="searchbutton"><b>Search</b></button>
+        </span>
+    </div>
+    <br>
+    <div class="dashboardperproduct">
+        <span class="card left">
+            <span class=" subcard left">
+                <img class="cardimg"
+                    src="https://cdn.shopify.com/s/files/1/0014/1377/5433/products/Glenn_mango_7gal_540x.jpg"
+                    alt="productImage">
+            </span>
+            <span class="subcard right">
+                <br><h3 class="cardtitle">Mango Saplings</h3><br>
+                <h4 class="carditem"><span class="left">Rs 100.00</span><span class="right">Seed/Sapling</span></h4><br>
+                <h4 class="carditem"><span class="left">Stock : 100</span><span class="right">4.5</span></h4><br>
+                <h4 class="carditem">Description</h4>
+                <p class="carditem">We provide mango plants, that are cultivated from quality-approved planting
+                    materials,
+                    insecticides and pesticides. Mango is
+                    indigenous to India and cultivated in various tropical regions and distributed all across the world.
+                </p><br>
+                <h4 class="carditem"><button class="left" onclick="updatepdt()">Update</button><button class="right"
+                        onclick='deletepdt()'>Delete</button></h4>
+            </span>
+        </span>
+        <span class="perproductchart right" id="chartperproduct"></span>
+    </div>
+    <!-- </div> -->
+    <!-- <footer>
+        <h3>Copyright 2020</h3>
+    </footer> -->
+</body>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="./Farmingproduct.js"></script>
+
+</html>

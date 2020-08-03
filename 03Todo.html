@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        .add {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .displayarea {
+            text-align: justify;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .dolist{
+            float: left;
+        }
+        .donelist{
+            float: right;
+        }
+        .box{
+            width: 500px;
+            height: 300px;
+            padding: 12px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='add'>
+        <form> <label for="todo">To do:</label>
+            <input type="text" id="todo" name="todo" required>&nbsp;&nbsp;
+            <input type="button" onclick="add()" value="Add">
+        </form>
+    </div>
+    <br>
+    <div class="displayarea">
+        <span class='box dolist'><b>To Do</b><br>
+            <input type="text" id="context">
+            <button type="button" onclick="completed()" value="Done" style="font-size: 16px;">Done</button>
+        </span>&nbsp;&nbsp;
+        <span class='box donelist'><b>Completed</b><br>
+            <input type="text" id="donelist"></span>
+    </div>
+
+</body>
+<script>
+    function add() {
+        console.log(document.getElementById('todo').value)
+        localStorage.task = document.getElementById('todo').value
+        document.getElementById('todo').value = ''
+        document.getElementById('context').value=localStorage.task
+
+    }
+    function completed() {
+        console.log(document.getElementById('context').value)
+        localStorage.done = document.getElementById('context').value
+        document.getElementById('context').value = ''
+        document.getElementById('donelist').value=localStorage.done
+
+    }
+</script>
+
+</html>

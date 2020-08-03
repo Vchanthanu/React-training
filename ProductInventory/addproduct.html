@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Farmingproduct.css">
+    <title>Add Prodcuts</title>
+</head>
+
+<body>
+    <div class='header'>
+        <a class="logotitle" href="product.html">
+            <img class="logo" src="./AppLogo.png" alt="Logo of Farming Product App">
+            <h2 class="appname">Farming Products</h2>
+        </a>
+        <h4 class="menu">
+            <a class=menulist href="product.html">Product</a>
+            <a class=menulist href="dashboard.html">Dashboard</a>
+            <!-- <a class=menulist href="login.html">Login</a> -->
+            <a class=menulist href="login.html">Logout</a>
+            <!-- <a class=menulist href="signup">SignUp</a> -->
+            <span class=menulist>Jhon</span>
+        </h4>
+    </div>
+    <div class="section">
+        <div class="container">
+            <span class="loginarea">
+                <h1>Product Details</h1>
+                <form class="addpdtform" onsubmit="addproduct()">
+                    <div class="formalign">
+                        <span class="left"><label for='name'>Name</label>
+                            <input type="text" id='name' name="name"></span>
+                        <span class="right"><label for='Manufacturename'>Company Name</label>
+                            <input type="text" id='Manufacturename' name="Manufacturename"></span>
+                    </div>
+                    <div class="formalign">
+                        <span class="left"><label for="price">Price</label>
+                            <input type="number" id='price'></span>
+                        <span class="right"><label for='stock'>Stock</label>
+                            <input type="number" id="stock"></span>
+                    </div>
+                    <div class="formalign">
+                        <span class="left"><label for="offer">Offer in %</label>
+                            <input type="number" id='offer'></span>
+                        <span class="right"><label for="caterogy">Caterogy</label>
+                            <select id="caterogy" name="caterogy">
+                                <option value="machinery">Machinery</option>
+                                <option value="seed/sapling">Seed/Sapling</option>
+                                <option value="tools">Tools</option>
+                            </select></span>
+                    </div>
+                    <div class="formalign">
+                        <span class="left"><label for="imageurl">Imageurl</label>
+                            <input type="text" id="imageurl"></span>
+                        <span class="right"><label for="">Today's Offer</label>
+                            <input type="radio" id="yes" name="Inoffer" value="yes">
+                            <label for="yes">Yes</label>
+                            <input type="radio" id="no" name="Inoffer" value="no">
+                            <label for="no">No</label></span>
+                    </div>
+                    <div class="formalign"><span class="left"><label for="description">Description</label>
+                            <input type="text" id="description"></span>
+                        <span class="right">
+                            <label for="dateofpdt">Date of Registration</label>
+                            <input type="date">
+                        </span>
+                    </div>
+                    <br><br>
+                    <input type="submit" value="Addproduct">
+                </form>
+            </span>
+        </div>
+    </div>
+    <!-- <footer>
+        <h3>Copyright 2020</h3>
+    </footer> -->
+</body>
+<script src="./Farmingproduct.js"></script>
+
+</html>
