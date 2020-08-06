@@ -6,7 +6,7 @@ import Header from './Header';
 import Dashboard from "./Dashboard";
 import AddEditProduct from './AddEditProduct'
 import {Switch,Route} from 'react-router-dom'
-import './App.css';
+// import './App.css';
 
 function App() {
   return (
