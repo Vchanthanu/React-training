@@ -1,0 +1,57 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "https://cdn.shopify.com/s/files/1/0014/1377/5433/products/Glenn_mango_7gal_540x.jpg",
+      "name": "Mango Saplings",
+      "companyName": "7Seeds",
+      "offer": false,
+      "price": "99.00",
+      "regDate": "2020-08-03",
+      "category": "Seed/Sapling",
+      "stock": 120,
+      "rating": "4.6",
+      "description": "We provide mango plants, that are cultivated from quality-approved planting materials, insecticides and pesticides."
+    },
+    {
+      "id": 2,
+      "image": "https://3.imimg.com/data3/HY/QB/GLADMIN-122151/coconut-seedlings-500x500.jpg",
+      "name": "Coconut Saplings",
+      "price": "120.00",
+      "companyName": "7Seeds",
+      "offer": false,
+      "regDate": "2020-08-03",
+      "category": "Seed/Sapling",
+      "stock": 250,
+      "rating": "4.7",
+      "description": "Plants We Supply Are Original Hybrid Varieties We Do In Our Own Garden.Plant Height 8 - 24 Inches"
+    },
+    {
+      "id": 3,
+      "image": "https://www.tafe.com/tractors/imt/thumb/TAFE-IMT-tractor-565.2.png",
+      "name": "Tractor 5400",
+      "price": "74,999.00",
+      "companyName": "TAFE",
+      "offer": false,
+      "regDate": "2020-08-03",
+      "category": "Machinery",
+      "stock": 20,
+      "rating": "4.9",
+      "description": "A tractor is an engineering vehicle for the purposes of hauling a trailer or machinery such as that used in agriculture or construction."
+    },
+    {
+      "id": 4,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41qM5nu3UmL.jpg",
+      "name": "Neem Tree",
+      "companyName": "7Seeds",
+      "offer": "true",
+      "price": "23",
+      "regDate": "2020-08-03",
+      "category": "seed/sapling",
+      "stock": "49",
+      "rating": 0,
+      "description": "Neem tree is easily propagated with seeds. Monsoon is the best season for seeds sowing."
+    }
+  ],
+  "users": []
+}
