@@ -7,6 +7,9 @@
 body{
     margin: 0;
 }  
+.error{
+    color: red;
+}
 .logo{
     width: 80px;
     height: 80px;
@@ -61,6 +64,7 @@ footer{
     background-image: url(https://db58mjtjr0n9n.cloudfront.net/wp-content/uploads/2017/02/26094110/r4d073222-5E-762x458-759x458.jpg);
     background-size: cover;
     float: left;
+    height: 550px;
     
 }
 .loginarea{
