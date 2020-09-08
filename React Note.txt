@@ -1,0 +1,108 @@
+references:
+	books: js -> http://bit.ly/jonduckett
+		react ->https://www.pdfdrive.com/pure-react-a-step-by-step-guide-to-mastering-react-d196825777.html
+			https://b-ok.asia/book/3489357/958956?regionChanged=&redirect=2410154
+			http://zetcode.com/javascript/jsonserver/
+
+	repo : https://github.com/prafful/html5-css-javascript-july-2020
+	       https://github.com/prafful/react-aug-2020
+	       https://github.com/prafful/react-redux-aug-2020
+	
+	youtube->HTML https://www.youtube.com/playlist?list=PL41lfR-6DnOruqMacTfff1zrEcqtmm7Fv
+		->Js  https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr
+		->ReactJs https://www.youtube.com/playlist?list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3
+		->React redux ->https://github.com/buckyroberts/React-Redux-Boilerplate
+				(good)https://www.youtube.com/playlist?list=PLC3y8-rFHvwheJHvseC3I0HuYI2f46oAK
+				https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBbSLZjvleMwldX8jGgXV6a
+				https://www.youtube.com/playlist?list=PLYuQF7T02SRx78Me_DDbACZO-9FCC9MVY
+		->FlexBox -> https://www.youtube.com/playlist?list=PL4cUxeGkcC9i3FXJSUfmsNOx8E7u6UuhG
+		->React Native -> https://www.youtube.com/playlist?list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ
+				  https://www.youtube.com/playlist?list=PLYxzS__5yYQlHANFLwcsSzt3elIbYTG1h
+				  https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1
+				  https://www.positronx.io/react-native-navigation-example-tutorial/
+
+		->charts https://www.youtube.com/watch?v=Ly-9VTXJlnA
+			 https://www.youtube.com/watch?v=biOMz4puGt8
+				https://www.youtube.com/watch?v=EgMjKqMo5r8
+	react charts ->https://www.educative.io/edpresso/how-to-use-chartjs-to-create-charts-in-react
+			https://react-google-charts.com/bar-chart
+	forms  -> https://www.wufoo.com/html5/
+	browserAllow -> www.caniuse.com
+	datePicker -> https://stackoverflow.com/questions/18020950/how-to-make-input-type-date-supported-on-all-browsers-any-alternatives
+	w3school -> https://www.w3schools.com/html/default.asp
+	html doc -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+	video& audio -> https://file-examples.com/index.php/sample-video-files/sample-mp4-files/
+	geolocation ->https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+	canvas ->https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial
+	local storage -> https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+	
+
+
+<--Setting app-->
+npm for react -> npm i -g create-react-app
+create react project -> create-react-app <app_name>
+to install nodemodules -> go inside app ; npm install
+to run app -> go inside app ; npm start
+routing -> react-router-dom
+concurrently -> running multiple task in different server(json,start,build)
+	"launch": "node_modules\\.bin\\concurrently --kill-others \"node_modules\\.bin\\json-server json-server-data/friends.json\" \"npm run start\""
+redux-> npm install react-redux , npm install redux
+
+<--- inteligense --->
+vs code extension -> simple react snippet , burke holland
+imr -> import react
+cc -> class component
+for more refer in extension itself
+
+restapi json data -> https://jsonplaceholder.typicode.com/
+		http://dummy.restapiexample.com/
+<---- React Notes ---->
+One Way data binding -> 1) Only parent can pass props(some info to child).
+		             Children can also pass updated info back to parent by using methods/events as props
+			2) IF at all communication has to happen between two or multiplr component then, they have to 
+				be related to each other in parent-child relationship
+
+props -> immutable,parent component uses it to pass ifo/var to child
+state -> mutable,component level variables
+
+Routing-> {Link,Switch,Route,hashRoute}
+
+lifecycle -> https://levelup.gitconnected.com/componentdidmakesense-react-lifecycle-explanation-393dcb19e4
+
+axios -> https://github.com/axios/axios
+
+Redux->Single Source of Truth -> global State(Store)
+	Redux plays the role for comunicating between comonents(similar to service in angular)
+	Only those component who has authority to access data, will be able to access data from store
+
+redux Working ->
+	import { combineReducer} from 'redux' (tocombine reducers)
+	import{createStore} from 'redux' (to root component) eg: const reduxStore = createStore(allReducers)
+	import {provider} from 'react-redux' (to root component) eg:<Provider store={reduxStore}></App></Provider>
+	import {connect} from 'react-redux' 
+
+	(to make component use state data ie: component to container) 
+		eg: export default connect(fnconvertStoretoProps)(<comp name>)
+			fnconvertStoretoProps=(state)=>{return { <propsName> : state.<name>}}
+
+	(to broadcast the action(event)ie:container to reducer)
+			onClick=()=>{this.props.eventName(<value>)}
+		eg:export default connect(fnconvertStoretoProps,convertEventToPropsAndDispatch)(<comp name>)
+			convertEventToPropsAndDispatch={(dispatch)=>return bindActionCreator ( {<eventName>:<type,payloadcreator .js>},dispatch) }
+	(to create action)
+		const <type,payloadcreator> = function(<value>){return {type:<Action_name>,payload:<value>} }
+	(to revice action in reducer)
+		const <actionReducer> = function <fnname>(state = null, action){
+    			switch (action.type) {
+       				 case <Action_name>:
+          				  return action.payload    
+       				 default:
+          				  break; }
+
+   return state
+
+Flow in redux:  reducer->store->container->action->action broadcast->reducer
+Reducers->Store contains many reducers(one reducer per component)
+	->component which consumes data from store is know as smartcomponent or container
+	-> Action Broadcaster is used for sending action from component to reducer 
+

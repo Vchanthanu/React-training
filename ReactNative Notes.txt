@@ -1,0 +1,21 @@
+< --- ReactNative -->
+
+offcialWebsite : https://reactnative.dev/docs/environment-setup
+Expo CLI : To create ReactNative Project,Deploying to Android and IOS sdk is easy
+
+deploy locally(npm start) (QR code): 1) Deploy in your Device  (Expo Client installed in device)
+			   	     2) Android Emulator(Android studio) or  IOS Simulation(XCode + mac os)
+			             3) Webbrowser
+-
+<--- Installation Steps --->
+1) npm i -g expo-cli (node package for reactnative app creation)
+2) expo init <app_name> (to create react-native app,if error occurs once try(npm instal)
+3) npm start (to run the app)
+4) to see in android App name: Expo
+5) npm react-native
+https://reactnavigation.org/docs/stack-navigator/
+5) npm i @react-navigation/native 
+6) npm i @react-navigation/stack
+7)npm i @react-navigation/drawer
+
+<
