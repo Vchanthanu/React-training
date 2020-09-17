@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Attachments</title>
+</head>
+<body>
+    <h1>HTML Media</h1>
+    <button onclick="playclick()">Play</button> &nbsp;
+    <button onclick="pauseclick()">pause</button>
+    <video id="myvideo"  muted loop poster=".\attachments\file_example_JPG_500kB.jpg" >
+        <source src=".\attachments\file_example_MP4_640_3MG.mp4" >
+        <source src = ".\attachments\file_example_MOV_640_800kB.mov">
+    </video>
+    <audio controls loop   src=".\attachments\file_example_MP3_700KB.mp3"></audio>
+    <hr>
+    HTML5 Media Api
+    <ol>
+        <li>Play/pause</li>
+        <li>check status of playback</li>
+        <li>Set Playback time</li>
+        <li>Create completely custom media player</li>
+    </ol>
+</body>
+<script src="./js/media.js"></script>
+</html>

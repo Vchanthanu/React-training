@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>geolocation</h3>
+    <button onclick="getlocation()">getcurrentlocation</button>
+    <div>
+        <span>latitude</span>
+        <span id='latref'></span><br>
+        <span>logitude</span>
+        <span id='lngref'></span>
+    </div>
+</body>
+<script>
+    function getlocation(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(location){
+                console.log(location)
+                latref.innerText = location.coords.latitude
+                lngref.innerText = location.coords.longitude
+            },function(error){
+                console.log(error);
+            })
+        }
+    }
+</script>
+</html>

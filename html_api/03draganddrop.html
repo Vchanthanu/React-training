@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dragsource{
+            width: 200px;
+            height: 200px;
+            background: pink;
+            float: left;
+        }
+        #dragtarget{
+            width: 400px;
+            height: 200px;
+            background: lightblue;
+            float: right;
+        }
+        .rocks{
+            width: 100px;
+            margin: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h3>Drag and Drop</h3>
+    <div id="dragsource" ondragover="imageDragStarted(event)"  ondrop="imageDropped(event)">
+        <img src="./attachments/file_example_JPG_500kB.jpg" 
+            class="rocks" 
+            draggable="true" 
+            id="html5rocks"
+            ondragstart="imageDragStart(event)">   
+            
+         <div style="background: blue; width: 50%;">
+            Something
+        </div>   
+    </div>
+
+
+    <div id="dragtarget"
+            ondragover="imageDragStop(event)"
+            ondrop="imageDropped(event)"
+            > Drop image here!!!! 
+    </div>
+
+
+    <script>
+        function imageDragStart(e){
+            console.log(e)
+            console.log(e.target.id)
+            e.dataTransfer.setData("id", e.target.id)
+
+        }   
+
+        imageDragStarted = function(e){
+            console.log(e)
+            e.preventDefault()
+        }
+
+        imageDragStop = function(e){
+            e.preventDefault()
+        }
+
+        imageDropped = function(e){
+            console.log(e.dataTransfer.getData("id"))
+            var html5rocksid = e.dataTransfer.getData("id")
+            var html5rocksref = document.getElementById(html5rocksid)
+            console.log(html5rocksref)
+            console.log(e.target.id)
+            var dropref = document.getElementById(e.target.id)
+            dropref.innerHTML = ""
+            dropref.appendChild(html5rocksref)
+            
+        }
+    </script>
+
+</body>
+</html>
